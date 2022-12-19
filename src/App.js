@@ -1,34 +1,97 @@
-import logo from './logo.svg';
-import './App.css';
 import { useEffect, useState } from 'react';
+import './App.css';
 
-async function getTestData() {
-  const raw = await fetch('https://raw.githubusercontent.com/epic404/json-tree/master/data/test1.json');
-  const data = await raw.json();
-  return data;
-}
+function Node({nodeKey, nodeValue, nodeType, autoExpand=false}) {
+  const [isExpanded, setExpanded] = useState(autoExpand);
+  const caretClass = `material-symbols-outlined ${isExpanded ? 'expanded' : 'collapsed'}`;
 
-function Node() {
-  const [isExpanded, setExpanded] = useState(false);
-  return (
-    <div>
-      <span
-        className={`material-symbols-outlined ${isExpanded ? 'expanded' : 'collapsed'}`}
-        onClick={() => setExpanded(!isExpanded)}>
-          arrow_right
-      </span>
-    </div>
-  )
+  console.log('nodeKey:', nodeKey)
+  console.log('nodeValue:', nodeValue)
+  console.log('nodeType:', nodeType)
+
+  switch (nodeType) {
+    case 'array':
+      return (
+        <div>
+          array
+        </div>
+      );
+    case 'object':
+      return [
+        <div className={!isExpanded && 'preview-block'}>
+          <span className={caretClass} onClick={() => setExpanded(!isExpanded)}>arrow_right</span>
+          {!isExpanded && <code>{`{...}`}</code> }
+        </div>,
+        isExpanded && <div className="node-block">
+          {
+            Object.keys(nodeValue).map((key, index) => {
+              return (
+                <Node
+                  key={`${index}-${nodeValue[key]}`}
+                  nodeKey={key}
+                  nodeValue={nodeValue[key]}
+                  nodeType={typeof nodeValue[key]} />
+              );
+            })
+          }
+        </div>
+      ];
+    default:
+      return (
+        <div className="node">
+          <code>{nodeKey}: {nodeValue}</code>
+        </div>
+      );
+  }
+  // return (
+  //   <div>
+  //     {/* <span className={caretClass} onClick={() => setExpanded(!isExpanded)}>arrow_right</span> */}
+  //     <code>{nodeKey}: {nodeValue}</code>
+  //   </div>
+  // );
 }
 
 function App() {
-  useEffect(() => {
-    const data = getTestData();
-  }, []);
+  const [jsonData, setJsonData] = useState(null);
 
-  return (
+  // const getJsonData = async (url) => {
+  //   try {
+  //     const response = await fetch(url);
+  //     const result = await response.json();
+  //     setJsonData(result);
+  //   } catch (error) {
+  //     console.error('Fetch Error:', error);
+  //   }
+  // };
+
+  const renderNodes = (data) => {
+    return Object.keys(data).map((key, index) => {
+      return <Node
+        key={index}
+        nodeKey={key}
+        nodeValue={data[key]}
+        nodeType={typeof data[key]} />;
+    });
+  };
+
+  useEffect(() => {
+    const testUrl = 'https://raw.githubusercontent.com/epic404/json-tree/master/data/test1.json';
+    const getJsonData = async () => {
+      try {
+        const response = await fetch(testUrl);
+        const result = await response.json();
+        setJsonData(result);
+      } catch (error) {
+        console.error('Fetch Error:', error);
+      }
+    };
+
+    getJsonData();
+  },[]);
+
+  return (jsonData &&
     <div className="app">
-      <Node />
+      <Node nodeValue={jsonData} nodeType={typeof jsonData} autoExpand={true} />
     </div>
   );
 }

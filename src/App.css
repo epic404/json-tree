@@ -1,5 +1,6 @@
 .app {
   background-color: #282c34;
+  color: #ffffff;
 }
 .material-symbols-outlined {
   color: #61dafb;
@@ -13,4 +14,17 @@
 
 .collapsed {
   transition: transform 100ms;
+}
+
+.node-block {
+  padding-left: 24px;
+}
+
+.preview-block {
+  display: flex;
+  align-items: center;
+}
+
+.node {
+  padding: 4px 0;
 }
