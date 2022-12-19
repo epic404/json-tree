@@ -1,0 +1,607 @@
+{
+  "title": "Browser compatibility",
+  "id": "browser_compatibility",
+  "isH3": false,
+  "data": {
+    "__compat": {
+      "mdn_url": "/en-US/docs/Web/HTML/Element/code",
+      "source_file": "html/elements/code.json",
+      "spec_url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-code-element",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
+      "support": {
+        "chrome": [
+          {
+            "version_added": "1",
+            "release_date": "2008-12-11"
+          }
+        ],
+        "chrome_android": [
+          {
+            "version_added": true
+          }
+        ],
+        "edge": [
+          {
+            "version_added": "12",
+            "release_date": "2015-07-28"
+          }
+        ],
+        "firefox": [
+          {
+            "version_added": "1",
+            "release_date": "2004-11-09"
+          }
+        ],
+        "firefox_android": [
+          {
+            "version_added": "4",
+            "release_date": "2011-03-29"
+          }
+        ],
+        "ie": [
+          {
+            "version_added": true
+          }
+        ],
+        "oculus": [
+          {
+            "version_added": true
+          }
+        ],
+        "opera": [
+          {
+            "version_added": true
+          }
+        ],
+        "opera_android": [
+          {
+            "version_added": true
+          }
+        ],
+        "safari": [
+          {
+            "version_added": true
+          }
+        ],
+        "safari_ios": [
+          {
+            "version_added": true
+          }
+        ],
+        "samsunginternet_android": [
+          {
+            "version_added": true
+          }
+        ],
+        "webview_android": [
+          {
+            "version_added": true
+          }
+        ]
+      }
+    }
+  },
+  "query": "html.elements.code",
+  "browsers": {
+    "chrome": {
+      "accepts_flags": true,
+      "accepts_webextensions": true,
+      "name": "Chrome",
+      "pref_url": "chrome://flags",
+      "preview_name": "Canary",
+      "releases": {
+        "108": {
+          "engine": "Blink",
+          "engine_version": "108",
+          "release_date": "2022-11-29",
+          "release_notes": "https://chromereleases.googleblog.com/2022/11/stable-channel-update-for-desktop_29.html",
+          "status": "current"
+        },
+        "109": {
+          "engine": "Blink",
+          "engine_version": "109",
+          "release_date": "2023-01-10",
+          "status": "beta"
+        },
+        "110": {
+          "engine": "Blink",
+          "engine_version": "110",
+          "release_date": "2023-02-07",
+          "status": "nightly"
+        }
+      },
+      "type": "desktop"
+    },
+    "chrome_android": {
+      "accepts_flags": true,
+      "accepts_webextensions": false,
+      "name": "Chrome Android",
+      "pref_url": "chrome://flags",
+      "releases": {
+        "108": {
+          "engine": "Blink",
+          "engine_version": "108",
+          "release_date": "2022-11-29",
+          "release_notes": "https://chromereleases.googleblog.com/2022/11/chrome-for-android-update_29.html",
+          "status": "current"
+        },
+        "109": {
+          "engine": "Blink",
+          "engine_version": "109",
+          "release_date": "2023-01-10",
+          "status": "beta"
+        },
+        "110": {
+          "engine": "Blink",
+          "engine_version": "110",
+          "release_date": "2023-02-07",
+          "status": "nightly"
+        }
+      },
+      "type": "mobile",
+      "upstream": "chrome"
+    },
+    "deno": {
+      "accepts_flags": true,
+      "accepts_webextensions": false,
+      "name": "Deno",
+      "releases": {
+        "1.28": {
+          "engine": "V8",
+          "engine_version": "10.9",
+          "release_date": "2022-11-13",
+          "release_notes": "https://github.com/denoland/deno/releases/tag/v1.28.0",
+          "status": "current"
+        }
+      },
+      "type": "server"
+    },
+    "edge": {
+      "accepts_flags": true,
+      "accepts_webextensions": true,
+      "name": "Edge",
+      "pref_url": "about:flags",
+      "releases": {
+        "108": {
+          "engine": "Blink",
+          "engine_version": "108",
+          "release_date": "2022-12-05",
+          "release_notes": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1080146242-december-5-2022",
+          "status": "current"
+        },
+        "109": {
+          "engine": "Blink",
+          "engine_version": "109",
+          "release_date": "2023-01-12",
+          "status": "beta"
+        },
+        "110": {
+          "engine": "Blink",
+          "engine_version": "110",
+          "release_date": "2023-02-09",
+          "status": "nightly"
+        }
+      },
+      "type": "desktop",
+      "upstream": "chrome"
+    },
+    "firefox": {
+      "accepts_flags": true,
+      "accepts_webextensions": true,
+      "name": "Firefox",
+      "pref_url": "about:config",
+      "preview_name": "Nightly",
+      "releases": {
+        "91": {
+          "engine": "Gecko",
+          "engine_version": "91",
+          "release_date": "2021-08-10",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/91",
+          "status": "esr"
+        },
+        "107": {
+          "engine": "Gecko",
+          "engine_version": "107",
+          "release_date": "2022-11-15",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/107",
+          "status": "current"
+        },
+        "108": {
+          "engine": "Gecko",
+          "engine_version": "108",
+          "release_date": "2022-12-13",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/108",
+          "status": "beta"
+        },
+        "109": {
+          "engine": "Gecko",
+          "engine_version": "109",
+          "release_date": "2023-01-17",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/109",
+          "status": "nightly"
+        },
+        "110": {
+          "engine": "Gecko",
+          "engine_version": "110",
+          "release_date": "2023-02-14",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/110",
+          "status": "planned"
+        },
+        "111": {
+          "engine": "Gecko",
+          "engine_version": "111",
+          "release_date": "2023-03-14",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/111",
+          "status": "planned"
+        },
+        "112": {
+          "engine": "Gecko",
+          "engine_version": "112",
+          "release_date": "2023-04-11",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/112",
+          "status": "planned"
+        },
+        "113": {
+          "engine": "Gecko",
+          "engine_version": "113",
+          "release_date": "2023-05-09",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/113",
+          "status": "planned"
+        },
+        "114": {
+          "engine": "Gecko",
+          "engine_version": "114",
+          "release_date": "2023-06-06",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/114",
+          "status": "planned"
+        },
+        "115": {
+          "engine": "Gecko",
+          "engine_version": "116",
+          "release_date": "2023-07-04",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/115",
+          "status": "planned"
+        },
+        "116": {
+          "engine": "Gecko",
+          "engine_version": "116",
+          "release_date": "2023-08-01",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/116",
+          "status": "planned"
+        },
+        "117": {
+          "engine": "Gecko",
+          "engine_version": "117",
+          "release_date": "2023-08-29",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/117",
+          "status": "planned"
+        },
+        "118": {
+          "engine": "Gecko",
+          "engine_version": "118",
+          "release_date": "2023-09-26",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/118",
+          "status": "planned"
+        },
+        "119": {
+          "engine": "Gecko",
+          "engine_version": "119",
+          "release_date": "2023-10-24",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/119",
+          "status": "planned"
+        },
+        "120": {
+          "engine": "Gecko",
+          "engine_version": "120",
+          "release_date": "2023-11-21",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/120",
+          "status": "planned"
+        },
+        "121": {
+          "engine": "Gecko",
+          "engine_version": "121",
+          "release_date": "2023-12-19",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/121",
+          "status": "planned"
+        }
+      },
+      "type": "desktop"
+    },
+    "firefox_android": {
+      "accepts_flags": false,
+      "accepts_webextensions": true,
+      "name": "Firefox for Android",
+      "pref_url": "about:config",
+      "releases": {
+        "107": {
+          "engine": "Gecko",
+          "engine_version": "107",
+          "release_date": "2022-11-15",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/107",
+          "status": "current"
+        },
+        "108": {
+          "engine": "Gecko",
+          "engine_version": "108",
+          "release_date": "2022-12-13",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/108",
+          "status": "beta"
+        },
+        "109": {
+          "engine": "Gecko",
+          "engine_version": "109",
+          "release_date": "2023-01-17",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/109",
+          "status": "nightly"
+        },
+        "110": {
+          "engine": "Gecko",
+          "engine_version": "110",
+          "release_date": "2023-02-14",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/110",
+          "status": "planned"
+        },
+        "111": {
+          "engine": "Gecko",
+          "engine_version": "111",
+          "release_date": "2023-03-14",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/111",
+          "status": "planned"
+        },
+        "112": {
+          "engine": "Gecko",
+          "engine_version": "112",
+          "release_date": "2023-04-11",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/112",
+          "status": "planned"
+        },
+        "113": {
+          "engine": "Gecko",
+          "engine_version": "113",
+          "release_date": "2023-05-09",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/113",
+          "status": "planned"
+        },
+        "114": {
+          "engine": "Gecko",
+          "engine_version": "114",
+          "release_date": "2023-06-06",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/114",
+          "status": "planned"
+        },
+        "115": {
+          "engine": "Gecko",
+          "engine_version": "116",
+          "release_date": "2023-07-04",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/115",
+          "status": "planned"
+        },
+        "116": {
+          "engine": "Gecko",
+          "engine_version": "116",
+          "release_date": "2023-08-01",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/116",
+          "status": "planned"
+        },
+        "117": {
+          "engine": "Gecko",
+          "engine_version": "117",
+          "release_date": "2023-08-29",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/117",
+          "status": "planned"
+        },
+        "118": {
+          "engine": "Gecko",
+          "engine_version": "118",
+          "release_date": "2023-09-26",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/118",
+          "status": "planned"
+        },
+        "119": {
+          "engine": "Gecko",
+          "engine_version": "119",
+          "release_date": "2023-10-24",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/119",
+          "status": "planned"
+        },
+        "120": {
+          "engine": "Gecko",
+          "engine_version": "120",
+          "release_date": "2023-11-21",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/120",
+          "status": "planned"
+        },
+        "121": {
+          "engine": "Gecko",
+          "engine_version": "121",
+          "release_date": "2023-12-19",
+          "release_notes": "https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/121",
+          "status": "planned"
+        }
+      },
+      "type": "mobile",
+      "upstream": "firefox"
+    },
+    "ie": {
+      "accepts_flags": false,
+      "accepts_webextensions": false,
+      "name": "Internet Explorer",
+      "releases": {},
+      "type": "desktop"
+    },
+    "nodejs": {
+      "accepts_flags": true,
+      "accepts_webextensions": false,
+      "name": "Node.js",
+      "releases": {
+        "14.8.0": {
+          "engine": "V8",
+          "engine_version": "8.4",
+          "release_date": "2020-08-11",
+          "release_notes": "https://nodejs.org/en/blog/release/v14.8.0/",
+          "status": "esr"
+        },
+        "16.17.0": {
+          "engine": "V8",
+          "engine_version": "9.4",
+          "release_date": "2022-08-16",
+          "release_notes": "https://nodejs.org/en/blog/release/v16.17.0/",
+          "status": "esr"
+        },
+        "18.0.0": {
+          "engine": "V8",
+          "engine_version": "10.1",
+          "release_date": "2022-04-19",
+          "release_notes": "https://nodejs.org/en/blog/release/v18.0.0/",
+          "status": "esr"
+        },
+        "19.0.0": {
+          "engine": "V8",
+          "engine_version": "10.7",
+          "release_date": "2022-10-18",
+          "release_notes": "https://nodejs.org/en/blog/release/v19.0.0/",
+          "status": "current"
+        }
+      },
+      "type": "server"
+    },
+    "oculus": {
+      "accepts_flags": true,
+      "accepts_webextensions": false,
+      "name": "Quest Browser",
+      "pref_url": "chrome://flags",
+      "releases": {
+        "23.0": {
+          "engine": "Blink",
+          "engine_version": "104",
+          "release_date": "2022-08-15",
+          "status": "current"
+        }
+      },
+      "type": "xr",
+      "upstream": "chrome_android"
+    },
+    "opera": {
+      "accepts_flags": true,
+      "accepts_webextensions": true,
+      "name": "Opera",
+      "pref_url": "opera://flags",
+      "releases": {
+        "92": {
+          "engine": "Blink",
+          "engine_version": "106",
+          "release_date": "2022-10-19",
+          "release_notes": "https://blogs.opera.com/desktop/2022/10/opera-92-stable/",
+          "status": "current"
+        },
+        "93": {
+          "engine": "Blink",
+          "engine_version": "107",
+          "status": "beta"
+        },
+        "94": {
+          "engine": "Blink",
+          "engine_version": "108",
+          "status": "nightly"
+        }
+      },
+      "type": "desktop",
+      "upstream": "chrome"
+    },
+    "opera_android": {
+      "accepts_flags": false,
+      "accepts_webextensions": false,
+      "name": "Opera Android",
+      "releases": {
+        "72": {
+          "engine": "Blink",
+          "engine_version": "106",
+          "release_date": "2022-10-21",
+          "release_notes": "https://blogs.opera.com/mobile/2022/10/ofa-72/",
+          "status": "current"
+        }
+      },
+      "type": "mobile",
+      "upstream": "chrome_android"
+    },
+    "safari": {
+      "accepts_flags": true,
+      "accepts_webextensions": true,
+      "name": "Safari",
+      "preview_name": "TP",
+      "releases": {
+        "16.1": {
+          "engine": "WebKit",
+          "engine_version": "614.2.9",
+          "release_date": "2022-10-24",
+          "release_notes": "https://developer.apple.com/documentation/safari-release-notes/safari-16_1-release-notes",
+          "status": "current"
+        }
+      },
+      "type": "desktop"
+    },
+    "safari_ios": {
+      "accepts_flags": true,
+      "accepts_webextensions": true,
+      "name": "Safari on iOS",
+      "releases": {
+        "16.1": {
+          "engine": "WebKit",
+          "engine_version": "614.2.9",
+          "release_date": "2022-10-24",
+          "release_notes": "https://developer.apple.com/documentation/safari-release-notes/safari-16_1-release-notes",
+          "status": "current"
+        }
+      },
+      "type": "mobile",
+      "upstream": "safari"
+    },
+    "samsunginternet_android": {
+      "accepts_flags": false,
+      "accepts_webextensions": false,
+      "name": "Samsung Internet",
+      "releases": {
+        "19.1": {
+          "engine": "Blink",
+          "engine_version": "102",
+          "release_date": "2022-11-08",
+          "status": "current"
+        }
+      },
+      "type": "mobile",
+      "upstream": "chrome_android"
+    },
+    "webview_android": {
+      "accepts_flags": false,
+      "accepts_webextensions": false,
+      "name": "WebView Android",
+      "releases": {
+        "108": {
+          "engine": "Blink",
+          "engine_version": "108",
+          "release_date": "2022-11-29",
+          "release_notes": "https://chromereleases.googleblog.com/2022/11/chrome-for-android-update_29.html",
+          "status": "current"
+        },
+        "109": {
+          "engine": "Blink",
+          "engine_version": "109",
+          "release_date": "2023-01-10",
+          "status": "beta"
+        },
+        "110": {
+          "engine": "Blink",
+          "engine_version": "110",
+          "release_date": "2023-02-07",
+          "status": "nightly"
+        }
+      },
+      "type": "mobile",
+      "upstream": "chrome_android"
+    }
+  }
+}
