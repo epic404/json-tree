@@ -210,7 +210,7 @@
               "airport_name": "St-François Airport",
               "airport_code": "SFC",
               "airport_gps": "TFFC",
-              "airport_lat": null,
+              "airport_lat": "undefined",
               "airport_lon": null
             },
             {

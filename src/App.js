@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 
 function Node({nodeKey, nodeValue, nodeType, autoExpand=false}) {
@@ -9,7 +9,7 @@ function Node({nodeKey, nodeValue, nodeType, autoExpand=false}) {
   const closingBracket = isArray ? ']' : '}';
   const collapsedPreview = isArray ? '[...]' : '{...}';
 
-  if (nodeType === 'object') {
+  if (nodeType === 'object' && nodeValue !== null) {
     return [
       <div className="preview-block">
         <span className={caretClass} onClick={() => setExpanded(!isExpanded)}>arrow_right</span>
@@ -36,7 +36,7 @@ function Node({nodeKey, nodeValue, nodeType, autoExpand=false}) {
   } else {
     return (
       <div className="node">
-        <code>{nodeKey}</code>:&nbsp;<code>{nodeValue}</code>
+        <code>{nodeKey}</code>:&nbsp;<code>{nodeValue || 'null'}</code>
       </div>
     );
   }
@@ -45,38 +45,25 @@ function Node({nodeKey, nodeValue, nodeType, autoExpand=false}) {
 function App() {
   const [jsonData, setJsonData] = useState(null);
   const [error, setError] = useState(null);
+  const [jsonSrc, setJsonSrc] = useState(null);
+  const testUrl = 'https://raw.githubusercontent.com/epic404/json-tree/master/data/test3.json';
 
-  // const getJsonData = async (url) => {
-  //   try {
-  //     const response = await fetch(url);
-  //     const result = await response.json();
-  //     setJsonData(result);
-  //   } catch (error) {
-  //     console.error('Fetch Error:', error);
-  //   }
-  // };
-
-  const getTestJson = async () => {
-    const testUrl = 'https://raw.githubusercontent.com/epic404/json-tree/master/data/test1.json';
-    const getJsonData = async () => {
-      try {
-        const response = await fetch(testUrl);
-        const result = await response.json();
-        setError(null);
-        setJsonData(result);
-      } catch (error) {
-        setError(`Error fetching JSON! Please verify your URL and try again.`);
-      }
-    };
-
-    getJsonData();
+  const getJson = async (url) => {
+    try {
+      const response = await fetch(url);
+      const result = await response.json();
+      setError(null);
+      setJsonData(result);
+    } catch (error) {
+      setError(`Error fetching JSON! Please verify your URL and try again.`);
+    }
   };
 
   return [
     <div className="input-wrapper">
-      <input />
-      <button>GET DATA</button>
-      <button onClick={() => getTestJson()}>TRY TEST DATA</button>
+      <input onChange={({target}) => setJsonSrc(target.value)} />
+      <button onClick={() => getJson(jsonSrc)}>GET DATA</button>
+      <button onClick={() => getJson(testUrl)}>TRY TEST DATA</button>
     </div>,
     error && <div className="input-error">
       {error}
