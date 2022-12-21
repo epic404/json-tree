@@ -1,6 +1,24 @@
 import { useState } from 'react';
 import './App.css';
 
+function useJsonHook() {
+  const [jsonData, setJsonData] = useState(null);
+  const [error, setError] = useState(null);
+
+  const getJson = async (url) => {
+    try {
+      const response = await fetch(url);
+      const result = await response.json();
+      setError(null);
+      setJsonData(result);
+    } catch (error) {
+      setError(`Error fetching JSON! Please verify your URL and try again.`);
+    }
+  };
+
+  return [getJson, jsonData, error];
+}
+
 function Node({nodeKey, nodeValue, nodeType, autoExpand=false}) {
   const [isExpanded, setExpanded] = useState(autoExpand);
   const isArray = Array.isArray(nodeValue);
@@ -43,21 +61,9 @@ function Node({nodeKey, nodeValue, nodeType, autoExpand=false}) {
 }
 
 function App() {
-  const [jsonData, setJsonData] = useState(null);
-  const [error, setError] = useState(null);
   const [jsonSrc, setJsonSrc] = useState(null);
   const testUrl = 'https://raw.githubusercontent.com/epic404/json-tree/master/data/test3.json';
-
-  const getJson = async (url) => {
-    try {
-      const response = await fetch(url);
-      const result = await response.json();
-      setError(null);
-      setJsonData(result);
-    } catch (error) {
-      setError(`Error fetching JSON! Please verify your URL and try again.`);
-    }
-  };
+  const [getJson, jsonData, error] = useJsonHook();
 
   return [
     <div className="input-wrapper">
